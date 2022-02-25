@@ -13,6 +13,11 @@ function load_student(id) {
 }
 
 function next() {
+if (current < students.length) {
 	load_student(current)
 	current++
+}
+else{
+	document.getElementById('btnnext').disabled = true
+}
 }
