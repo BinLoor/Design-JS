@@ -1,11 +1,11 @@
-let students = [
-{'id':1, 'name':'Danila','surname':'Alferov'},
-{'id':2, 'name':'Tihon','surname':'Balaganski'},
-{'id':3, 'name':'Konstantin','surname':'Bobrovski'},
-{'id':4, 'name':'Vladimir','surname':'Burikin'},
-{'id':5, 'name':'Semen','surname':'Veligjanin'}
-]
+let students = []
 let current = 0
+
+function LoadFromSite(){
+	$.get('http://217.71.129.139:4035/students.php', function(data){
+		students = JSON.parse(data) ['response'];
+	})
+}
 
 function load_student(id) {
 	document.getElementById('name').value = students[id].name
