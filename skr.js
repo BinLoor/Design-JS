@@ -1,34 +1,23 @@
 let students = []
 let current = 0
 
-function LoadFromSite(){
+function LoadFromSite() {
 	$.get('http://217.71.129.139:4035/students.php', function(data){
-		students = JSON.parse(data) ['response'];
-	})
+		students = JSON.parse(data) ['response']
+		show_table()
+	});
 }
-
-function load_student(id) {
-	document.getElementById('name').value = students[id].name
-	document.getElementById('surname').value = students[id].surname
-}
-
-function next() {
-	document.getElementById('btnprev').disabled = false
-	current++
-	load_student(current)
-	
-	if (current == 4) {
-		document.getElementById('btnnext').disabled = true
+function show_table() {
+	let table = $('#tbl_all')
+	for (let i=0; i < students.length; i++) {
+		let tr = $('<tr></tr>')
+		
+		let td1 = $('<td>' + students[i].id + '</td>')
+		let td2 = $('<td>' + students[i].surname + '</td>')
+		let td3 = $('<td>' + students[i].name + '</td>')
+		
+		tr.append(td1).append(td2).append(td3)
+		
+		table.append(tr)
 	}
 }
-
-function prev() {
-	document.getElementById('btnnext').disabled = false
-	current--
-	load_student(current)
-	
-	if (current == 0) {
-		document.getElementById('btnprev').disabled = true
-	}
-}
-
