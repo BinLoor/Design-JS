@@ -8,5 +8,6 @@ ctx.moveTo(50,150);
 ctx.lineTo(150,50);
 ctx.lineTo(200,150);
 ctx.lineTo(50,150);
+ctx.lineCap = "round";
 ctx.stroke(); 
 }
