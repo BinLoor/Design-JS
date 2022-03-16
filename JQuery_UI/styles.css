@@ -8,3 +8,10 @@ height:100px;
 .ui-draggable {
 background-color:#ecbfda;
 }
+#sort1 li { 
+margin:2px;
+padding: 0.4em; 
+border-style:solid; 
+border-width:1px;
+height: 18px;
+}
