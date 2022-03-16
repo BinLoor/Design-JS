@@ -2,6 +2,8 @@ $(document).ready(function() {
    $("div").draggable();
 });
 $(document).ready(function() {
-   $("#drag1").draggable({axis:"x"});
-   $("#drag2").draggable({axis:"y"});
+   $("#el1").draggable({axis:"x,y"});
+});
+$(document).ready(function(){
+   $("#el1").resizable();
 });

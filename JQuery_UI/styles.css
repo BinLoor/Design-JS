@@ -5,6 +5,6 @@ border-width:1px;
 width:130px;
 height:100px; 
 }
-.ui-draggable-dragging {
+.ui-draggable {
 background-color:#ecbfda;
 }
