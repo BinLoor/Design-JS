@@ -11,9 +11,10 @@
 
 <script type="text/javascript">
 $(document).ready(function() {
-  
-   $("#accordion").accordion();
-	$("#accordion1").accordion();
+	$("#accordion").accordion();
+	$("#accordion1").accordion(); 
+	$("#el1,#el2").button();
+	
 	$("#auto1").autocomplete({source:['Австралия', 'Австрия', 'Азербайджан', 
 'Аргентина', 'Афганистан', 'Бангладеш','Беларусь',
 'Бразилия', 'Великобритания',  'Вьетнам', 'Германия','Греция', 'Грузия','Дания', 
@@ -131,6 +132,18 @@ $(document).ready(function() {
 <li>ЮАР</li>
 <li>Япония</li>
 </ul>
-Введите имя: <input id="auto1"/>
+Введите имя: <input id="auto1"/> 
+<p> </p>
+<b>4. Оформите как кнопки элементы с id=el1, id=el2, id=el3.</b>
+<br /><br />
+<button id="el1">Кнопка 1</button>
+<button onclick = 'document.location="http://www.wisdomweb.ru"' id="el2">Кнопка 2 wisdomweb.ru</button>
+<br /><br />
+<div id="el3">
+<input type="checkbox" name="check" id="value1" /><label for="value1">Флажок 1</label>
+<input type="checkbox" name="check" id="value2" /><label for="value2">Флажок 2</label>
+<input type="checkbox" name="check" id="value3" /><label for="value3">Флажок 3</label>
+<input type="checkbox" name="check" id="value4" /><label for="value4">Флажок 4</label>
+</div>
 </body>
 </html>
